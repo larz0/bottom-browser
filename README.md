@@ -1,6 +1,8 @@
 ## Bottom Browser
 
-This is a [Brackets](http://brackets.io) extension for browsing sites within Brackets. Only works for certain sites.
+This is a [Brackets](http://brackets.io) extension for browsing sites within Brackets. Some sites won't load because of [X-Frame-Options HTTP response header](https://developer.mozilla.org/en-US/docs/HTTP/X-Frame-Options?redirectlocale=en-US&redirectslug=The_X-FRAME-OPTIONS_response_header) and what not. Flash won't work either.
+
+![Bottom Browser Screenshot](http://f.cl.ly/items/2H2Y422R31221B2y3y0K/bottom-browser-for-brackets.png)
 
 ### Installation
 
