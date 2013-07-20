@@ -1,0 +1,13 @@
+/* Toolbar icon */
+#bottom-browser-icon {
+    background: url(bottom-sprite.svg);
+}
+
+#bottom-browser-icon.active {
+    background-position: 0 -24px !important;
+}
+
+/* DevDocs panel */
+#bottom-browser-iframe {
+    background: #DFE2E2;
+}
