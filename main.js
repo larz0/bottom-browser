@@ -20,6 +20,9 @@
  * DEALINGS IN THE SOFTWARE.
  */
 
+/*jslint vars: true, plusplus: true, devel: true, nomen: true,  regexp: true, indent: 4, maxerr: 50 */
+/*global define, brackets, $, window */
+
 define(function (require, exports, module) {
     "use strict";
 
@@ -108,11 +111,22 @@ define(function (require, exports, module) {
             }
             $icon.toggleClass("active");
             panel.show();
+            _bottomBrowserSearch();
         } else {
             $icon.toggleClass("active");
             panel.hide();
         }
     }
+    
+    function _bottomBrowserSearch() {
+        $("#bottom-browser-search").keypress(function(e) {
+            if(e.which == 13) {
+                query = this.value; 
+                $iframe.attr("src", "");
+                window.setTimeout(_loadIframeSrc, 0);                
+            }
+        });  
+    }        
     
     function _toggleVisibility() {
         visible = !visible;
@@ -162,8 +176,7 @@ define(function (require, exports, module) {
             _resetIframeSrc();
         }
     }
-    
-    
+        
     // Register the command and shortcut
     CommandManager.register(
         NAVIGATE_SEARCH_THIS,
@@ -176,4 +189,5 @@ define(function (require, exports, module) {
     var menu = Menus.getMenu(Menus.AppMenuBar.NAVIGATE_MENU);
     menu.addMenuItem(CMD_SEARCH_THIS);
     
+
 });
