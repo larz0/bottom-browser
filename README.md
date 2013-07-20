@@ -8,7 +8,7 @@ This is a [Brackets](http://brackets.io) extension for browsing sites within Bra
 
 * Select **File > Extension Manager...** (or click the "lego brick" icon in the toolbar)
 * Click **Install from URL...**
-* Enter the url of this repo: https://github.com/larz/bottom-browser
+* Enter the url of this repo: https://github.com/larz0/bottom-browser
 * Click **Install**
 
 ### How to use
