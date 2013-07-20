@@ -1,6 +1,6 @@
 ## Bottom Browser
 
-This is a [Brackets](http://brackets.io) extension for browsing sites within Brackets.
+This is a [Brackets](http://brackets.io) extension for browsing sites within Brackets. Only works for certain sites.
 
 ### Installation
 
@@ -21,4 +21,4 @@ This is a [Brackets](http://brackets.io) extension for browsing sites within Bra
 
 ### Version History
 
-07/20/2013 v0.0.1 - Initial release. I have no idea what I'm doing.
+07/20/2013 v0.0.1 - I have no idea what I'm doing.
