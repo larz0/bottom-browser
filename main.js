@@ -57,7 +57,7 @@ define(function (require, exports, module) {
     }
     
     function _loadDocumentation() {
-        var url = "http://devdocs.io/";
+        var url = "http://framerjs.com";
         
         if (query) {
             url += "#q=" + query;
@@ -174,5 +174,5 @@ define(function (require, exports, module) {
     
     // Create a menu item bound to the command
     var menu = Menus.getMenu(Menus.AppMenuBar.NAVIGATE_MENU);
-    menu.addMenuItem(CMD_LOOKUP_IN_DEVDOCS);
+    menu.addMenuItem(CMD_GOOGLE_THIS);
 });

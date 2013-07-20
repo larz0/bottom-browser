@@ -1,4 +1,4 @@
-/* Toolbar icon */
+/* Toolbar Icon */
 #bottom-browser-icon {
     background: url(bottom-sprite.svg);
 }
@@ -7,7 +7,7 @@
     background-position: 0 -24px !important;
 }
 
-/* DevDocs panel */
+/* Bottom Browser Panel */
 #bottom-browser-iframe {
     background: #DFE2E2;
 }
