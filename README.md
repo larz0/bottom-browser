@@ -16,7 +16,8 @@ This is a [Brackets](http://brackets.io) extension for browsing sites within Bra
 
 ### Credits
 
-This extension is based on [@gruehle](https://github.com/gruehle)'s [DevDocs Viewer extension](https://github.com/gruehle/dev-docs-viewer).
+* This extension is based on [@gruehle](https://github.com/gruehle)'s rad [DevDocs Viewer extension](https://github.com/gruehle/dev-docs-viewer).
+* Thanks Bing for being able load in an iframe.
 
 ### Version History
 
