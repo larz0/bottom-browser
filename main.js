@@ -36,8 +36,8 @@ define(function (require, exports, module) {
     var panelHTML   = require("text!panel.html");
     
     // Constants
-    var NAVIGATE_GOOGLE_THIS  = "Google This",
-        CMD_GOOGLE_THIS       = "larz.googleThis";
+    var NAVIGATE_SEARCH_THIS  = "Search This",
+        CMD_SEARCH_THIS       = "larz.searchThis";
     
     // jQuery objects
     var $icon,
@@ -57,7 +57,7 @@ define(function (require, exports, module) {
     }
     
     function _loadDocumentation() {
-        var url = "http://framerjs.com";
+        var url = "http://bing.com/search?q=hey";
         
         if (query) {
             url += "#q=" + query;
@@ -67,7 +67,7 @@ define(function (require, exports, module) {
         $iframe.load(function () {
             $iframe.contents().get(0).addEventListener("click", function (e) {
                 if (e.target && e.target.href) {
-                    if (e.target.href.indexOf("http://devdocs.io") !== 0) {
+                    if (e.target.href.indexOf("google") > -1 ) {
                         // Open external links in the default browser
                         NativeApp.openURLInDefaultBrowser(e.target.href);
                         e.preventDefault();
@@ -166,13 +166,13 @@ define(function (require, exports, module) {
     
     // Register the command and shortcut
     CommandManager.register(
-        NAVIGATE_GOOLE_THIS,
-        CMD_GOOGLE_THIS,
+        NAVIGATE_SEARCH_THIS,
+        CMD_SEARCH_THIS,
         _handleLookupInGoogle
     );
     KeyBindingManager.addBinding(CMD_GOOGLE_THIS, "Shift-Cmd-L");
     
     // Create a menu item bound to the command
     var menu = Menus.getMenu(Menus.AppMenuBar.NAVIGATE_MENU);
-    menu.addMenuItem(CMD_GOOGLE_THIS);
+    menu.addMenuItem(CMD_SEARCH_THIS);
 });
