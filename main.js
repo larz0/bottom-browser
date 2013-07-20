@@ -56,11 +56,11 @@ define(function (require, exports, module) {
         }
     }
     
-    function _loadDocumentation() {
-        var url = "http://bing.com/search?q=hey";
+    function _loadIframeSrc() {
+        var url = "http://bing.com";
         
         if (query) {
-            url += "#q=" + query;
+            url += "/search?q=" + query;
         }
         
         $iframe.attr("src", url);
@@ -102,7 +102,7 @@ define(function (require, exports, module) {
                 });
                 $iframe.attr("height", $panel.height());
                 
-                _loadDocumentation();
+                _loadIframeSrc();
 
                 window.setTimeout(_resizeIframe);
             }
@@ -137,7 +137,7 @@ define(function (require, exports, module) {
     $("#sidebar").on("panelCollapsed panelExpanded panelResizeUpdate", _resizeIframe);
     
     // Add "Lookup in DevDocs" command
-    function _handleLookupInGoogle() {
+    function _handleLookupInSearch() {
         var editor = EditorManager.getActiveEditor();
         
         if (!editor) {
@@ -148,18 +148,18 @@ define(function (require, exports, module) {
         }
         query = editor.getSelectedText();
         
-        function _resetDocumentation() {
+        function _resetIframeSrc() {
             // Hack to force the iframe to reload with the new query. 
             $iframe.attr("src", "");
-            window.setTimeout(_loadDocumentation, 0);
+            window.setTimeout(_loadIframeSrc, 0);
         }
         
         if (!visible) {
             visible = true;
             _setPanelVisibility(visible);
-            window.setTimeout(_resetDocumentation);
+            window.setTimeout(_resetIframeSrc);
         } else {
-            _resetDocumentation();
+            _resetIframeSrc();
         }
     }
     
@@ -168,11 +168,12 @@ define(function (require, exports, module) {
     CommandManager.register(
         NAVIGATE_SEARCH_THIS,
         CMD_SEARCH_THIS,
-        _handleLookupInGoogle
+        _handleLookupInSearch
     );
-    KeyBindingManager.addBinding(CMD_GOOGLE_THIS, "Shift-Cmd-L");
+    KeyBindingManager.addBinding(CMD_SEARCH_THIS, "Shift-Cmd-L");
     
     // Create a menu item bound to the command
     var menu = Menus.getMenu(Menus.AppMenuBar.NAVIGATE_MENU);
     menu.addMenuItem(CMD_SEARCH_THIS);
+    
 });
