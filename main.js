@@ -131,8 +131,7 @@ define(function (require, exports, module) {
     
     function _overAPI() {
         $("#overapi").click(function() {
-                $iframe.attr("src", "http://overapi.com/javascript/");
-                window.setTimeout(_loadIframeSrc, 0);
+                window.setTimeout($iframe.attr("src", "http://overapi.com/javascript/"), 0);
         });
     }
     
