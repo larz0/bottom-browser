@@ -130,10 +130,10 @@ define(function (require, exports, module) {
     }
     
     function _overAPI() {
-        $("#overapi").addEventListener("click", function() {
+        $("#overapi").click(function() {
                 $iframe.attr("src", "http://overapi.com/javascript/");
                 window.setTimeout(_loadIframeSrc, 0);
-        }, false);
+        });
     }
     
     function _toggleVisibility() {
