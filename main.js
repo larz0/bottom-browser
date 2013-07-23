@@ -112,7 +112,7 @@ define(function (require, exports, module) {
             $icon.toggleClass("active");
             panel.show();
             _bottomBrowserSearch();
-            overAPI();
+            _overAPI();
         } else {
             $icon.toggleClass("active");
             panel.hide();
@@ -129,8 +129,8 @@ define(function (require, exports, module) {
         });  
     }
     
-    function overAPI() {
-        $("#overapi").addEventListener("click", function(e) {
+    function _overAPI() {
+        $("#overapi").addEventListener("click", function() {
                 $iframe.attr("src", "http://overapi.com/javascript/");
                 window.setTimeout(_loadIframeSrc, 0);
         }, false);
