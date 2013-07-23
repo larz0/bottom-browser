@@ -112,7 +112,7 @@ define(function (require, exports, module) {
             $icon.toggleClass("active");
             panel.show();
             _bottomBrowserSearch();
-            _overAPI();
+            _setBookmarks();
         } else {
             $icon.toggleClass("active");
             panel.hide();
@@ -129,9 +129,12 @@ define(function (require, exports, module) {
         });  
     }
     
-    function _overAPI() {
+    function _setBookmarks() {
         $("#overapi").click(function() {
                 window.setTimeout($iframe.attr("src", "http://overapi.com/javascript/"), 0);
+        });
+        $("#cssalmanac").click(function() {
+                window.setTimeout($iframe.attr("src", "http://css-tricks.com/almanac/"), 0);
         });
     }
     
