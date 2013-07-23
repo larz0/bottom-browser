@@ -190,7 +190,7 @@ define(function (require, exports, module) {
         CMD_SEARCH_THIS,
         _handleLookupInSearch
     );
-    KeyBindingManager.addBinding(CMD_SEARCH_THIS, "Shift-Cmd-L");
+    KeyBindingManager.addBinding(CMD_SEARCH_THIS, "Shift-Cmd-B");
     
     // Create a menu item bound to the command
     var menu = Menus.getMenu(Menus.AppMenuBar.NAVIGATE_MENU);
