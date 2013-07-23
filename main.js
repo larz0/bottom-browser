@@ -126,7 +126,14 @@ define(function (require, exports, module) {
                 window.setTimeout(_loadIframeSrc, 0);                
             }
         });  
-    }        
+    }
+    
+    function overAPI() {
+        $("#overapi").onclick(function(e) {
+                $iframe.attr("src", "http://overapi.com/javascript/");
+                window.setTimeout(_loadIframeSrc, 0);     
+        });
+    }
     
     function _toggleVisibility() {
         visible = !visible;
