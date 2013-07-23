@@ -14,7 +14,7 @@ This is a [Brackets](http://brackets.io) extension for browsing sites within Bra
 ### How to use
 
 * Click the "bottom" icon in the toolbar to open and close the panel; the panel can be resized vertically.
-* Bing highlight text by pressing Shift+Cmd+L.
+* Bing highlight text by pressing Shift+Cmd+B.
 
 ### Credits
 
